@@ -1,0 +1,12 @@
+/* LegalAnalyticsTable.css */
+.legalAnalyticsTable {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .legalAnalyticsTable th,
+  .legalAnalyticsTable td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  
