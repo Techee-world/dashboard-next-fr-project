@@ -31,11 +31,13 @@ console.log(filteredSearchList,'some')
     setSelectedOption(null);
   };
 
-  const handleSearchListSelection = (key) => {
-    setSelectedOption(searchList[key]);
-    setQuery(key);  
-    setBackgroundColor("bg-blue-300 flex-none w-min font-mono rounded px-2");
-  };
+ const handleSearchListSelection = (key, value) => {
+   setSelectedOption(searchList[key]);
+   console.log(key,'key')
+   console.log(value,'value')
+   setQuery(key);
+   setBackgroundColor("bg-blue-300 flex-none w-min font-mono rounded px-2");
+ };
 
   const handleQueryChange = (event) => {
     setQuery(event.target.value);
@@ -109,7 +111,9 @@ console.log(filteredSearchList,'some')
                                   ? " dark:bg-slate-600 dark:bg-opacity-60 "
                                   : "text-slate-900 dark:text-white"
                               }`}
-                              onClick={() => handleSearchListSelection(key)}
+                              onClick={() =>
+                                handleSearchListSelection(key, searchList[key])
+                              }
                             >
                               <span className="cursor-pointer font-mono ">
                                 {key}:
